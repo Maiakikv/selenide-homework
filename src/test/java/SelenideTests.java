@@ -1,17 +1,5 @@
-import com.codeborne.selenide.conditions.ExactText;
-import com.codeborne.selenide.selector.ByText;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import com.codeborne.selenide.*;
-import com.codeborne.selenide.testng.SoftAsserts;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import java.io.FileNotFoundException;
-import java.time.Duration;
 import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Configuration.*;
