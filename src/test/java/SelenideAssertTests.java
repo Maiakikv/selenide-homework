@@ -48,7 +48,8 @@ public class SelenideAssertTests {
         //find-ის ნაცვლად დოლარის ნიშნებიც ჩავსვი და ისევ ამაოდ
         List<SelenideElement> books = $$(By.xpath("//div[contains(text(), 'Reilly Media')]//ancestor-or-self::div[@role='row']//div[2]//div//span//a[contains(text(), 'JavaScript')]"));
         // $$("img[src*='book']").stream.forEach(img -> img.shouldBe(not(empty));
-        books.stream().forEach(img -> img.shouldBe(not(empty)));
+        List <SelenideElement> images = $$(By.xpath("//img[contains(@src, 'book')]"));
+        images.stream().forEach(img -> img.shouldBe(not(empty)));
 
     }
 
