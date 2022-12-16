@@ -32,10 +32,7 @@ public class SelenideAssertTests {
         String firstMatch = books.first().find("div").find("div", 1).getText();
         softAssert.assertEquals(firstMatch, "Learning JavaScript Design Patterns");
         SelenideElement back =$(byId("addNewRecordButton"));
-        books.stream().forEach(b -> b.find("a").scrollTo().pressEnter());
-        //ვერ გადავდივარ უკან ვერანაირი ცდით
-        back();
-
+        books.stream().forEach(b -> {b.find("a").scrollTo().pressEnter();back();});
         softAssert.assertAll();
 
     }
